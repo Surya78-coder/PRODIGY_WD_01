@@ -1,0 +1,118 @@
+/* Navigation Menu Styles */
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #3498db; /* Bright blue */
+  padding: 1rem;
+  text-align: center;
+  transition: background-color 0.5s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#nav li {
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+#nav a {
+  color: #fff; /* White */
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+#nav a:hover {
+  color: #ffc107; /* Vibrant orange */
+}
+
+#nav li:hover {
+  transform: scale(1.1);
+  background-color: #f1c40f; /* Bright yellow */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Scroll Effect */
+#nav.scrolled {
+  background-color: #2ecc71; /* Bright green */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Landing Page Styles */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+  background-image: linear-gradient(to bottom, #f7f7f7, #e7e7e7); /* Gradient background */
+}
+
+section {
+  padding: 2rem;
+  background-color: #fff; /* White */
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s ease;
+  border-radius: 10px;
+}
+
+h1 {
+  font-weight: bold;
+  margin-top: 0;
+  color: #9b59b6; /* Deep pink */
+  transition: color 0.5s ease;
+}
+
+p {
+  margin-bottom: 20px;
+  color: #666; /* Dark gray */
+}
+
+/* Animations */
+#nav.scrolled {
+  animation: navScroll 0.5s ease;
+}
+
+@keyframes navScroll {
+  0% {
+    background-color: #3498db;
+  }
+  100% {
+    background-color: #2ecc71;
+  }
+}
+
+section:hover {
+  animation: sectionHover 0.5s ease;
+}
+
+@keyframes sectionHover {
+  0% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: #f7f7f7;
+  }
+}
+
+h1:hover {
+  animation: h1Hover 0.5s ease;
+}
+
+@keyframes h1Hover {
+  0% {
+    color: #9b59b6;
+  }
+  100% {
+    color: #8e44ad; /* Deep purple */
+  }
+}
